@@ -11,7 +11,7 @@ const MAX_MULTIPART_BYTES = 4 * 1024 * 1024;
 
 class RequestBodyTooLargeError extends Error {}
 
-async function readBoundedBody(request: Request): Promise<Uint8Array> {
+async function readBoundedBody(request: Request): Promise<Uint8Array<ArrayBuffer>> {
   const declaredLength = request.headers.get("content-length");
   if (declaredLength !== null) {
     const length = Number(declaredLength);

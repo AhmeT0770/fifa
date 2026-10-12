@@ -1,6 +1,6 @@
 export type Json = string | number | boolean | null | { [key: string]: Json | undefined } | Json[];
 
-interface RankedProfileRow {
+type RankedProfileRow = {
   profile_id: string;
   game_version: string;
   display_name: string;
@@ -12,7 +12,7 @@ interface RankedProfileRow {
   updated_at: string;
 }
 
-interface RankedMatchRow {
+type RankedMatchRow = {
   room_id: string;
   game_version: string;
   home_profile_id: string;
