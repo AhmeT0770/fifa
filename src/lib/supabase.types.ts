@@ -91,7 +91,7 @@ export interface RankedDatabase {
         Relationships: [];
       };
     };
-    Views: Record<string, never>;
+    Views: { [_ in never]: never };
     Functions: {
       submit_ranked_result: {
         Args: {
@@ -116,7 +116,7 @@ export interface RankedDatabase {
         Returns: { allowed: boolean; retry_after: number }[];
       };
     };
-    Enums: Record<string, never>;
-    CompositeTypes: Record<string, never>;
+    Enums: { [_ in never]: never };
+    CompositeTypes: { [_ in never]: never };
   };
 }
